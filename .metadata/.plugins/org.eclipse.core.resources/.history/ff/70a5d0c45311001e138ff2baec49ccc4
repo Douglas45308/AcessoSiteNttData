@@ -1,0 +1,34 @@
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.pt.Dado;
+
+
+
+public class AcessarSite {
+
+	String url;
+    WebDriver driver;
+
+
+    @Before
+    public void iniciar(){
+    	url ="https://www.uol.com.br/";
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+        driver = new ChromeDriver();
+    }
+
+    @After
+    public void fecharNavegador(){
+        driver.quit();
+    }
+	
+    @Dado("acesse o site da Ntt Data")
+    public void acesse_o_site_da_ntt_data1() {
+        
+    }
+    
+}
